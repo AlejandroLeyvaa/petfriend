@@ -10,8 +10,8 @@ interface IProps {
   srcDesktop: string;
   alt: string;
   petName: string;
-  petAge: string;
-  petLocation: string;
+  petAge: number;
+  petLocation: string[];
   petGenre: string;
   petSize: string;
   characteristics: string[];
@@ -33,7 +33,7 @@ const Card = ({
   characteristics,
 }: IProps) => {
   return (
-    <article>
+    <article className='Card'>
       <ImagesContainer
         cls={cls}
         figureId={figureId}
