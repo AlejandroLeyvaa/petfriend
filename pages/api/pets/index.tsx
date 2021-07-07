@@ -1,4 +1,4 @@
-import {IncomingMessage, ServerResponse } from 'http';
+import  {IncomingMessage, ServerResponse } from 'http';
 import DB from '../../../lib/mocks/db';
 
 const allPets = async (req: IncomingMessage, res: ServerResponse) => {
