@@ -1,4 +1,5 @@
 interface IProps {
+  children: any | null;
   cls: string;
   figureId: string | null;
   srcDefault: string;
@@ -9,6 +10,7 @@ interface IProps {
 }
 
 const ImagesContainer = ({
+  children,
   cls,
   figureId,
   srcDefault,
@@ -19,11 +21,12 @@ const ImagesContainer = ({
 }: IProps) => {
   return (
     <figure className={cls} id={figureId}>
+      {children}
       <picture>
         <source media="(min-width:1024px)" srcSet={srcDesktop} />
         <source media="(min-width:768px)" srcSet={srcTablet} />
         <source media="(min-width:320px)" srcSet={srcMobile} />
-        <img src={srcDefault} alt={alt} />
+        <img src={srcDefault} alt={alt} sizes="284px" />
       </picture>
     </figure>
   );

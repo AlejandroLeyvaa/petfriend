@@ -1,0 +1,106 @@
+:root {
+  --shadow-basic: -1px -1px 5px rgba(0, 0, 0, 0.15),
+    1px 1px 5px rgba(0, 0, 0, 0.15);
+
+  --gradient: linear-gradient(
+    270deg,
+    #00897b 32.28%,
+    rgba(87, 219, 205, 0.8) 109.65%
+  );
+}
+
+html {
+  height: 100%;
+  font-size: 62.5%;
+}
+
+body {
+  font-size: 1.4rem;
+}
+
+img {
+  object-fit: cover;
+  max-width: 100%;
+  height: 100%;
+}
+
+#Main {
+  height: 100%;
+  padding: 1.6rem;
+}
+
+.Card {
+  border-radius: 10px;
+  box-shadow: var(--shadow-basic);
+  width: 100%;
+  max-width: 375px;
+  margin-block: 1.6rem;
+  /* height: 364px; */
+}
+
+.Heart-container {
+  background-color: #ffffff;
+  border-radius: 50%;
+  box-shadow: var(--shadow-basic);
+  width: 32px;
+  height: 32px;
+  position: absolute;
+  left: 16px;
+  bottom: 16px;
+}
+
+.Card-figure {
+  height: 284px;
+  max-height: 284px;
+  margin: 0;
+  position: relative;
+}
+
+.Card-figure,
+.Card-figure img {
+  border-top-left-radius: 10px;
+  border-top-right-radius: 10px;
+}
+
+.Card-footer {
+  /* height: 80px; */
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-template-rows: 1fr 1fr 1fr;
+  padding-inline: 1.6rem;
+}
+
+.petName {
+  grid-column: 1/2;
+  grid-row: 1/2;
+}
+
+.petAge {
+  grid-column: 2/3;
+  grid-row: 1/2;
+}
+
+.petLocation-first {
+  grid-column: 1/2;
+  grid-row: 2/3;
+}
+
+.petLocation-second {
+  grid-column: 2/3;
+  grid-row: 2/3;
+}
+
+.petGenre {
+  grid-column: 1/2;
+  grid-row: 3/4;
+}
+
+.petSize {
+  grid-column: 2/3;
+  grid-row: 3/4;
+}
+
+.petCharacteristics {
+  grid-column: 3/4;
+  grid-row: 3/4;
+}

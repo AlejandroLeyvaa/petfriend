@@ -33,7 +33,7 @@ const Card = ({
   characteristics,
 }: IProps) => {
   return (
-    <article className='Card'>
+    <article className="Card">
       <ImagesContainer
         cls={cls}
         figureId={figureId}
@@ -42,7 +42,9 @@ const Card = ({
         srcTablet={srcTablet}
         srcDesktop={srcDesktop}
         alt={alt}
-      />
+      >
+        <div className="Heart-container"></div>
+      </ImagesContainer>
       <CardFooter
         petName={petName}
         petAge={petAge}

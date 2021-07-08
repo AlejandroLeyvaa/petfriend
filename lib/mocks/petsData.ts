@@ -10,9 +10,9 @@ const data: Record<TPetID, TPet> = {
     petGenre: 'Male',
     petSize: 'Medium',
     images: {
-      imageSmall: '',
-      imageMedium: '',
-      imageBig: '',
+      imageSmall: '/novi-raj-Ex83Cq5TRAI-unsplash.jpg',
+      imageMedium: '/novi-raj-Ex83Cq5TRAI-unsplash.jpg',
+      imageBig: '/novi-raj-Ex83Cq5TRAI-unsplash.jpg',
     },
     characteristics: ['Happy'],
   }
