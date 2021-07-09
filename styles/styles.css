@@ -15,6 +15,7 @@ html {
 }
 
 body {
+  height: 100%;
   font-size: 1.4rem;
 }
 
@@ -24,9 +25,19 @@ img {
   height: 100%;
 }
 
+ul, p {
+  margin: 0;
+  padding: 0;
+}
+
 #Main {
   height: 100%;
   padding: 1.6rem;
+}
+
+.Main-currentPet {
+  width: 100%;
+  height: 100%;
 }
 
 .Card {
@@ -49,7 +60,7 @@ img {
   bottom: 16px;
 }
 
-.Card-figure {
+.Card-figure, .CurrentPet-figure {
   height: 284px;
   max-height: 284px;
   margin: 0;
@@ -62,12 +73,23 @@ img {
   border-top-right-radius: 10px;
 }
 
-.Card-footer {
+.Card-footer, .CurrentPet-data {
   /* height: 80px; */
   display: grid;
-  grid-template-columns: 1fr 1fr;
+  grid-template-columns: 1fr 1fr 1fr;
   grid-template-rows: 1fr 1fr 1fr;
   padding-inline: 1.6rem;
+}
+
+/* .Card-footer :is(p, a), .CurrentPet :is(p, a) {
+  display: flex;
+  align-items: center;
+} */
+
+.Card-footer :is(p, a, ul), .CurrentPet :is(p, a, ul) {
+  width: 100%;
+  margin: .4rem 0;
+  padding: .8rem 0;
 }
 
 .petName {
@@ -102,5 +124,50 @@ img {
 
 .petCharacteristics {
   grid-column: 3/4;
-  grid-row: 3/4;
+  grid-row: 1/4;
+}
+
+.CurrentPet {
+  width: 100%;
+}
+
+.CurrentPet-figure {
+  height: 30%;
+  margin: 0;
+  padding: 0;
+}
+
+.CurrentPet-data {
+  background-color: #ffffff;
+  border-top-left-radius: 25px;
+  border-top-right-radius: 25px;
+  box-shadow: var(--shadow-basic);
+  height: 25vh;
+  padding-inline: rever ;
+  position: relative;
+  top: -24px;
+  /* margin: 1.6rem; */
+}
+
+.CurrentPet-data ul p {
+  margin: 0;
+  padding: 0;
+}
+
+.CurrentPet-description {
+  box-shadow: var(--shadow-basic);
+  width: 100%;
+  height: 35vh;
+}
+
+.CurrentPet button {
+  background-image: var(--gradient);
+  border: none;
+  border-radius: 25px;
+  color: #ffffff;
+  font-weight: bold;
+  width: calc(100% - 32px);
+  height: 40px;
+  display: block;
+  margin: 2.4rem auto;
 }

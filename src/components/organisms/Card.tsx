@@ -2,6 +2,7 @@ import ImagesContainer from '../atoms/ImageContainer';
 import CardFooter from '../molecules/CardFooter';
 
 interface IProps {
+  petID: string;
   cls: string;
   figureId: string;
   srcDefault: string;
@@ -18,6 +19,7 @@ interface IProps {
 }
 
 const Card = ({
+  petID,
   cls,
   figureId,
   srcDefault,
@@ -46,6 +48,7 @@ const Card = ({
         <div className="Heart-container"></div>
       </ImagesContainer>
       <CardFooter
+        petID={petID}
         petName={petName}
         petAge={petAge}
         petLocation={petLocation}

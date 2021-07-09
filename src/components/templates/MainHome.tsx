@@ -8,14 +8,12 @@ const MainHome = () => {
     fetch('/api/pets')
       .then((response) => response.json())
       .then(({ data }) => {
-        console.log(data);
         setPetList(data);
       });
   }, []);
 
   return (
     <main id="Main">
-
       <h1>Pets</h1>
 
       {petList.length > 0 &&
@@ -24,10 +22,7 @@ const MainHome = () => {
             id,
             petName,
             petAge,
-            petLocation: {
-              worldLocation,
-              cordsLocation
-            },
+            petLocation: { worldLocation, cordsLocation },
             petGenre,
             petSize,
             images: { imageSmall, imageMedium, imageBig },
@@ -35,7 +30,8 @@ const MainHome = () => {
           } = item;
           return (
             <Card
-              cls='Card-figure'
+              petID={id}
+              cls="Card-figure"
               key={id}
               figureId={id}
               srcDefault={imageSmall}
@@ -50,10 +46,8 @@ const MainHome = () => {
               petSize={petSize}
               characteristics={characteristics}
             />
-          )
-        })
-      }
-
+          );
+        })}
     </main>
   );
 };

@@ -7,6 +7,10 @@ class Database {
   async getAll() {
     return Object.values(data);
   }
+
+  async getOne(id) {
+    return Object.values(data)[id];
+  }
 }
 
 export default Database;
