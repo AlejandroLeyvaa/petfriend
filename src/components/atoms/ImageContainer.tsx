@@ -26,7 +26,7 @@ const ImagesContainer = ({
         <source media="(min-width:1024px)" srcSet={srcDesktop} />
         <source media="(min-width:768px)" srcSet={srcTablet} />
         <source media="(min-width:320px)" srcSet={srcMobile} />
-        <img src={srcDefault} alt={alt} sizes="284px" />
+        <img src={srcDefault} alt={alt} />
       </picture>
     </figure>
   );
