@@ -1,4 +1,4 @@
-import { ICreateUser } from '../interfaces/IUser';
+import { ICreateUser } from '../../interfaces/IUser';
 import bcrypt from 'bcrypt';
 
 

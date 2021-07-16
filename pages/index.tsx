@@ -1,6 +1,7 @@
 import MainHome from '../src/components/templates/MainHome';
 import Header from '../src/components/atoms/Header';
 import Footer from '../src/components/atoms/Footer';
+import { SendimageForm } from '../src/components/molecules/SendimageForm';
 
 const Home = () => {
   return (
@@ -10,11 +11,10 @@ const Home = () => {
       </Header>
       <MainHome />
       <Footer>
-        <i>Add</i>
+        <SendimageForm />
       </Footer>
     </>
-  )
-}
+  );
+};
 
 export default Home;
-

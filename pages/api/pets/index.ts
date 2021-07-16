@@ -1,9 +1,9 @@
-import  {IncomingMessage, ServerResponse } from 'http';
+import { NextApiRequest, NextApiResponse } from 'next';
 import DB from '../../../lib/mocks/db';
 
 const db = new DB();
 
-const allPets = async (req: IncomingMessage, res: ServerResponse) => {
+const allPets = async (req: NextApiRequest, res: NextApiResponse) => {
   const allEntries = await db.getAll();
   const length = allEntries.length;
 

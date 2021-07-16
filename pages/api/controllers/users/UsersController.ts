@@ -1,6 +1,6 @@
 import { ICreateUser } from '../../../../interfaces/IUser';
 import UserAdopter from '../../models/users/UserAdopter';
-import { hashingPasword } from '../../../../utils/hashingPassword';
+import { hashingPasword } from '../../../../lib/utils/hashingPassword';
 
 const userAddopter = new UserAdopter();
 

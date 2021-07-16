@@ -9,7 +9,7 @@ class Database {
   }
 
   async getOne(id) {
-    return Object.values(data)[id];
+    return Object.values(data)[id - 1];
   }
 }
 
