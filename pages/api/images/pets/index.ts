@@ -6,8 +6,13 @@ const destinationPath ='./public/images/pets';
 let storage = multer.diskStorage({
   destination: destinationPath,
   filename: function (req, file, cb) {
-    console.log(file.originalname);
-    cb(null, file.originalname);
+    const { petName } = req.body;
+    const arrFileName: string[] = file.originalname.split('.');
+    console.log(arrFileName)
+    const setFileName = petName + '.' + arrFileName[arrFileName.length - 1 ];
+
+    console.log('FILE NAME', req.body.petName, file, setFileName);
+    cb(null, setFileName);
   },
 });
 
@@ -29,6 +34,8 @@ const handler = nextConnect({
 handler.use(upload.single('image'));
 
 handler.post((req: NextApiRequest, res: NextApiResponse) => {
+  const { petName  } = req.body;
+  console.log(petName);
   res.status(200).json({ message: 'Image created' });
 })
 

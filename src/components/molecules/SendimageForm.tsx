@@ -3,7 +3,14 @@ import { useSendImage } from '../../hooks/useSendImage';
 export const SendimageForm = () => {
   const {formRef, handleSubmit, handleChange, fileInputRef} = useSendImage('/api/images/pets')
   return (
-    <form ref={formRef} onSubmit={handleSubmit}>
+    <form className='sendImage-form' ref={formRef} onSubmit={handleSubmit}>
+      <label htmlFor='image'>
+       <input
+         type='text'
+         name='petName'
+         ref={fileInputRef}
+        />
+      </label>
       <label htmlFor='image'>
        <input
          type='file'
